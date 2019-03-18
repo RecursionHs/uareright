@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/goToHado.iml" filepath="$PROJECT_DIR$/goToHado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hdfsClient/hdfsClient.iml" filepath="$PROJECT_DIR$/hdfsClient/hdfsClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
+    </modules>
+  </component>
+</project>
