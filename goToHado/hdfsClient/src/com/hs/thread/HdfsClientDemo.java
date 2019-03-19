@@ -1,4 +1,4 @@
-package com.hs;
+package com.hs.thread;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
