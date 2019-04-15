@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="flowCunt">
+    <output-path>$PROJECT_DIR$/out/artifacts/flowCunt</output-path>
+    <root id="root">
+      <element id="archive" name="hdfsClient.jar">
+        <element id="module-output" name="hdfsClient" />
+      </element>
+      <element id="library" level="module" name="JUnit4" module-name="hdfsClient" />
+      <element id="library" level="project" name="hadoop_2.6.4" />
+    </root>
+  </artifact>
+</component>
