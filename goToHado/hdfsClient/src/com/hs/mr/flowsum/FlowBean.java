@@ -1,6 +1,6 @@
 package com.hs.mr.flowsum;
 
-import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * 需要序列化传输数据,实现Writable接口即可
  */
-public class FlowBean implements Writable {
+public class FlowBean implements WritableComparable<FlowBean> {
 
     private Long upFlow;
     private Long dFlow;
@@ -22,6 +22,11 @@ public class FlowBean implements Writable {
     }
 
     public FlowBean(Long upFlow, Long dFlow) {
+        this.upFlow = upFlow;
+        this.dFlow = dFlow;
+        this.sumFlow = upFlow +dFlow;
+    }
+    public void set(Long upFlow, Long dFlow) {
         this.upFlow = upFlow;
         this.dFlow = dFlow;
         this.sumFlow = upFlow +dFlow;
@@ -78,10 +83,11 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return "FlowBean{" +
-                "upFlow=" + upFlow +
-                ", dFlow=" + dFlow +
-                ", sumFlow=" + sumFlow +
-                '}';
+        return upFlow + "\t" + dFlow  +"\t" + sumFlow;
+    }
+
+    @Override
+    public int compareTo(FlowBean o) {
+        return this.sumFlow > o.getSumFlow() ? -1 : 1;
     }
 }

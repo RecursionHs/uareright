@@ -2,49 +2,22 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="flowCunt" />
+      <artifact name="FlowCountSort" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6427446-6b31-4b19-8765-355b45fefaa7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/flowCunt.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/wc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/hadoop_2_6_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/nio/MultiplexerTimeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/nio/TimeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/nio/TimeClientHandle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/nio/TimeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/client/HdfsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/protocol/ClientNamenodeProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/service/MyNameNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/service/PublishServiceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hdfs/HdfsStreamAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logClient/logClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logClient/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logClient/src/log/GenerateLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logClient/src/log/sd.sd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logClient/src/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/hdfsjars.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="b6427446-6b31-4b19-8765-355b45fefaa7" name="Default Changelist" comment="hdfs and mapreduce demo">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FlowCountSort.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/hdfsClient_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCountSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/InfoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/RJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/flowCunt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/wc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goToHado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/goToHado.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hdfsClient/hdfsClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hdfsClient/hdfsClient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hdfsClient/src/com/hs/thread/HdfsClientDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/hdfs/HdfsClientDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hdfsClient/com/hs/HdfsClientDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/thread/com/hs/ExtendsThreadImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/src/com/hs/socket/GetDataMethodImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/socket/GetDataMethodImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/src/com/hs/socket/ServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/socket/ServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/src/com/hs/socket/ServiceServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/socket/ServiceServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/src/com/hs/socket/ServiceServerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/socket/ServiceServerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/src/com/hs/thread/ExtendsThreadImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/src/com/hs/thread/ExtendsThreadImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thread/thread.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basicsforRpc/basicsforRpc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hdfsClient/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/hdfsClient/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,53 +33,7 @@
     <favorites_list name="goToHado" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-325">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#810#811#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#922#923#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -156,8 +83,11 @@
         <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountMapper.java" />
         <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountReducer.java" />
         <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountDriver.java" />
-        <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java" />
         <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java" />
+        <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java" />
+        <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCountSort.java" />
+        <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/InfoBean.java" />
+        <option value="$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/RJoin.java" />
       </list>
     </option>
   </component>
@@ -185,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -201,46 +130,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goToHado" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goToHado" type="462c0819:PsiDirectoryNode" />
-              <item name="hdfsClient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goToHado" type="462c0819:PsiDirectoryNode" />
-              <item name="hdfsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goToHado" type="462c0819:PsiDirectoryNode" />
-              <item name="hdfsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="flowsum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goToHado" type="462c0819:PsiDirectoryNode" />
-              <item name="hdfsClient" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wcdemo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goToHado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,8 +141,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555344865425" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556974922784" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -259,17 +150,17 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20344828" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.hs.mr.flowsum" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JAVA\ideaSpace\goToHado\logClient\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JAVA\ideaSpace\goToHado\hdfsClient\src" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JAVA\ideaSpace\goToHado\logClient\src" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hs.mr.flowsum" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,7 +294,18 @@
       <workItem from="1554799591251" duration="148000" />
       <workItem from="1555079736472" duration="6000" />
       <workItem from="1555228850523" duration="8464000" />
-      <workItem from="1555336334087" duration="5486000" />
+      <workItem from="1555336334087" duration="6704000" />
+      <workItem from="1555426810014" duration="912000" />
+      <workItem from="1555514632410" duration="1218000" />
+      <workItem from="1555603241806" duration="38000" />
+      <workItem from="1555943341802" duration="9000" />
+      <workItem from="1555943395884" duration="2049000" />
+      <workItem from="1556119573743" duration="151000" />
+      <workItem from="1556776825354" duration="8041000" />
+      <workItem from="1556951187010" duration="3889000" />
+      <workItem from="1557061633407" duration="2519000" />
+      <workItem from="1558863324711" duration="88000" />
+      <workItem from="1562855327231" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="add socket test demo">
       <created>1553013132254</created>
@@ -412,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553013132254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hdfs and mapreduce demo">
+      <created>1555344988313</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555344988314</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -448,19 +357,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61011000" />
+    <option name="totallyTimeSpent" value="81467000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49439776" visible="true" weight="0.31702414" />
-      <window_info id="Structure" order="1" sideWeight="0.5048951" side_tool="true" weight="0.2855228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.23389356" visible="true" weight="0.1802949" />
+      <window_info id="Structure" order="1" sideWeight="0.765035" side_tool="true" weight="0.17627347" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50075185" side_tool="true" weight="0.27794337" />
+      <window_info id="Favorites" order="6" sideWeight="0.50700283" side_tool="true" weight="0.17426273" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3277311" />
@@ -469,11 +377,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32867134" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32633054" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32913166" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32913166" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49932975" weight="0.32913166" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Duplicate detector" order="15" weight="0.32913166" />
@@ -492,85 +400,52 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add socket test demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add socket test demo" />
+    <MESSAGE value="hdfs and mapreduce demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="hdfs and mapreduce demo" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basicsforRpc/src/com/hs/socket/ServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicsforRpc/src/com/hs/nio/TraditionalServer.java" />
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/nio/channels/spi/AbstractSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/lang/AutoCloseable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/io/Closeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/jre/lib/rt.jar!/sun/nio/ch/SelectorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/nio/channels/Selector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="205" column="30" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="287" column="34" lean-forward="true" selection-start-line="287" selection-start-column="34" selection-end-line="287" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/jre/lib/rt.jar!/sun/nio/ch/SelectionKeyImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/nio/channels/SelectionKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="132" column="7" lean-forward="true" selection-start-line="132" selection-start-column="7" selection-end-line="132" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/softInstall/jdk/src.zip!/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8025">
-          <caret line="348" column="53" selection-start-line="347" selection-start-column="32" selection-end-line="348" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/softInstall/jdk/src.zip!/java/nio/Buffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -686,13 +561,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/protocol/ClientNamenodeProtocol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -850,26 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/mapreduce/hadoop-mapreduce-client-core-2.6.4.jar!/org/apache/hadoop/mapreduce/lib/input/FileInputFormat.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -877,39 +725,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/hadooprpc/protocol/ClientNamenodeProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="-436">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/softInstall/jdk/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="164" column="19" selection-start-line="164" selection-start-column="19" selection-end-line="164" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/softInstall/jdk/src.zip!/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/common/hadoop-common-2.6.4.jar!/org/apache/hadoop/io/WritableComparable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCountSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="-425">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/flowsum/FlowCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="900">
+          <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/softInstall/jdk/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1925">
+          <caret line="100" column="30" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/common/hadoop-common-2.6.4.jar!/org/apache/hadoop/io/Writable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/mapreduce/hadoop-mapreduce-client-core-2.6.4.jar!/org/apache/hadoop/mapreduce/Mapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/common/hadoop-common-2.6.4.jar!/org/apache/hadoop/fs/Path.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="204" column="41" lean-forward="true" selection-start-line="204" selection-start-column="41" selection-end-line="204" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/wcdemo/WordCountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/RJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/studyVideo/jarbar/hadoop2.6.4/common/hadoop-common-2.6.4.jar!/org/apache/hadoop/io/Text.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="139" column="33" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hdfsClient/src/com/hs/mr/rjoin/InfoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -921,8 +870,10 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
-          <last-edited>flowCunt</last-edited>
+          <artifact-editor>
+            <show-sorted>false</show-sorted>
+          </artifact-editor>
+          <last-edited>FlowCountSort</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -975,6 +926,7 @@
             <option name="proportions">
               <list>
                 <option value="0.20344828" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

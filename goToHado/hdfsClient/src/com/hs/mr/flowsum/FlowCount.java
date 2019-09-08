@@ -37,7 +37,8 @@ public class FlowCount {
                 long  sum_upFlow = 0;
                 long  sum_dFlow = 0;
 
-                //遍历所有的bean，将其中的上行流量，下行流量分别累加
+                //遍历所有的bean，将其中的上行流量，
+                //  下行流量分别累加
                 for(FlowBean flow : values){
                     sum_upFlow += flow.getUpFlow();
                     sum_dFlow += flow.getdFlow();
