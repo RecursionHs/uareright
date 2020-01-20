@@ -8,6 +8,7 @@ package com.hs.strategy.game;
 public class StartGame {
 
     public static void main(String[] args) {
+
         Mechanician mechanician = new Mechanician();
         mechanician.appearance();
         mechanician.setWeapon(new AK47());
