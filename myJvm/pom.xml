@@ -13,6 +13,7 @@
         <module>multiThread</module>
         <module>lamda</module>
         <module>goDeepIntoJvm</module>
+        <module>myZk</module>
     </modules>
     <dependencies>
         <dependency>
@@ -20,7 +21,26 @@
             <artifactId>cglib</artifactId>
             <version>3.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adyliu</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>2.1.1</version>
+        </dependency>
     </dependencies>
 
 </project>

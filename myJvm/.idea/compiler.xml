@@ -10,6 +10,7 @@
         <module name="goDeepIntoJvm" />
         <module name="lamda" />
         <module name="multiThread" />
+        <module name="myZk" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
