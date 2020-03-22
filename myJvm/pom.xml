@@ -14,6 +14,10 @@
         <module>lamda</module>
         <module>goDeepIntoJvm</module>
         <module>myZk</module>
+        <module>TNetty</module>
+        <module>rabMq</module>
+        <module>bootMq</module>
+        <module>myutil</module>
     </modules>
     <dependencies>
         <dependency>
