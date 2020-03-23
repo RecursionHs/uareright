@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * AtomicInteger能够进行原子性操作，但是操作过程中。值可能已经多次发生变化，但无法察觉。
+ * AtomicInteger能够进行原子性操作，但是操作过程中。值可能已经多次发生变化，但无法察觉。ABA问题
  */
 public class CASD2 {
 
