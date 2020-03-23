@@ -1,8 +1,7 @@
 package com.hs.hadooprpc.client;
 
 import com.hs.hadooprpc.protocol.ClientNamenodeProtocol;
-
-
+import org.apache.hadoop.ipc.RPC;
 import javax.security.auth.login.Configuration;
 import java.io.IOException;
 import java.net.InetSocketAddress;
