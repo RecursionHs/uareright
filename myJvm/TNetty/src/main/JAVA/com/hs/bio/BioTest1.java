@@ -11,11 +11,13 @@ import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BioTest1 {
     public static void main(String[] args) {
@@ -127,7 +129,54 @@ public class BioTest1 {
     }
 
     private void processWithSelector(Selector selector)throws IOException {
+        selector.select();
+        Set<SelectionKey> selectionKeys = selector.selectedKeys();
+        Iterator<SelectionKey> iterator = selectionKeys.iterator();
+        while (iterator.hasNext()){
+            SelectionKey selectionKey = iterator.next();
+            if(selectionKey.isValid() == false){
+                continue;
+            }
 
+            if(selectionKey.isReadable()){
+                ByteBuffer byteBuffer = ByteBuffer.wrap(new byte[16]);
+                SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
+                int read = socketChannel.read(byteBuffer);
+                if(read == -1){
+                    selectionKey.cancel();
+                    socketChannel.close();
+                }else{
+                    byteBuffer.flip();
+                    byte[] bytes = new byte[byteBuffer.limit() - byteBuffer.position()];
+                    byteBuffer.get(bytes);
+                    byte[] byteMerger = byteMerger(bytes, "收到了".getBytes());
+                    ByteBuffer buffer = ByteBuffer.allocate(byteMerger.length);
+                    buffer.clear();
+                    buffer.get(byteMerger,0,byteMerger.length);
+                    socketChannel.write(buffer);
+                }
+            }
+            iterator.remove();
+        }
+    }
+
+    public void start()throws IOException{
+        Selector selector = Selector.open();
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+        serverSocketChannel.register(selector,SelectionKey.OP_ACCEPT);
+        AtomicInteger atomicInteger = new AtomicInteger();
+        Selector[] selectors = initWorkerSelectors();
+        while (true){
+            selector.select();
+            Set<SelectionKey> selectionKeys = selector.selectedKeys();
+            Iterator<SelectionKey> iterator = selectionKeys.iterator();
+            while (iterator.hasNext()){
+                iterator.next();
+                SocketChannel socketChannel = serverSocketChannel.accept();
+                socketChannel.register(selectors[atomicInteger.getAndIncrement() % selectors.length],SelectionKey.OP_READ);
+                iterator.remove();
+            }
+        }
     }
 
 
