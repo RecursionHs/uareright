@@ -1,6 +1,5 @@
 package com.hs.img;
 
-import org.junit.Test;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,7 +10,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class ImgUtils {
