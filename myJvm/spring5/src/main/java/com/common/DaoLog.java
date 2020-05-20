@@ -5,11 +5,16 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+import java.util.Iterator;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Pointcut各类join point连接点控制的大小粒度不一样。
  */
-@Component
 @Aspect
+@Component
 public class DaoLog {
     /**
      * execution(modifiers-pattern? ret-type-pattern declaring-type-pattern?name-pattern(param-pattern) throws-pattern?)
@@ -82,7 +87,7 @@ public class DaoLog {
         System.out.println("after...");
     }
 
-    @Around("pointCutWithin()")
+    @Around("pointCutWithin() && args(java.lang.String)")
     public void around(ProceedingJoinPoint pjp){
         System.out.println("around before");
         try {
@@ -96,5 +101,46 @@ public class DaoLog {
         }
         System.out.println("around after");
 
+    }
+
+    @Before("execution(* com.dao.*.*(..))")
+    public void beforInline(){
+        System.out.println("直接在切入点声明表达式...");
+    }
+
+    /**
+     * returning属性中使⽤的名称必须与advice⽅法中参数的名称相对应。当⽅法执⾏返回时，
+     * 返回值作为相应的参数值传递给通知⽅法。返回⼦句还限制只匹配那些返回指定类型值的⽅法执⾏
+     */
+    @AfterReturning(value = "pointCutExecution()",
+                    returning = "queue")
+    public void afterReturn(BlockingDeque<Integer> queue){
+        Iterator iterator = queue.iterator();
+        System.out.println("returning...");
+        while(iterator.hasNext()){
+            Integer next = (Integer)iterator.next();
+            System.out.println(next);
+        }
+
+    }
+
+    /**
+     * 这里试过用BlockingDeque<Integer> queue接受值不好使，只有用BlockingQueue
+     * @param queue
+     */
+    @AfterReturning(value = "pointCutExecution()",returning = "queue")
+    public void afterReturnn(BlockingQueue queue){
+        Iterator iterator = queue.iterator();
+        System.out.println("returning...");
+        while(iterator.hasNext()){
+            Integer next = (Integer)iterator.next();
+            System.out.println(next);
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+       System.out.println("afterReturning...");
     }
 }
