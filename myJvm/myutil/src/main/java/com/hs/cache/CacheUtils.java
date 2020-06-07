@@ -1,9 +1,8 @@
 package com.hs.cache;
 
 import java.lang.reflect.Method;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.Executors;
+import java.util.*;
+import java.util.concurrent.*;
 
 /**
  * @ClassName ReflectUtils
@@ -16,8 +15,68 @@ public class CacheUtils {
     /**
      * 定义缓存
      */
-    private static Map<String,Object> cache = new ConcurrentHashMap();
+    private static final Map<String,Object> cache = new ConcurrentHashMap();
     private static final String SPLITTER = "::";
+    /**
+     * Vector实用于写多读少的场景，CopyOnWriteArrayList在写的时候会复制一个副本，对副本写，写完用副本替换原值，读的时候不需要同步，适用于写少读多的场合。
+     */
+    private static final List<MyCacheBean> anotationList = new Vector<>();
+
+    static{
+       /*long startM = System.currentTimeMillis();
+        new Timer("checkTime",true)
+                .schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        System.out.println("校验时间开始...");
+                        //校验时间
+                        if(anotationList.size() > 0){
+                                Iterator<MyCacheBean> iterator = anotationList.iterator();
+                            while (iterator.hasNext()){
+                                MyCacheBean myCache = iterator.next();
+                                TimeUnit timeUnit = myCache.getTimeUnit();
+                                if(timeUnit == TimeUnit.SECONDS){
+                                    int timeOut = myCache.getTimeOut();
+                                    if((System.currentTimeMillis() - startM)/1000 > timeOut){
+                                        cache.remove(myCache.getKey());
+                                        iterator.remove();
+                                        System.out.println("移除key..." + myCache.getKey());
+                                    }
+                                }
+                            }
+                        }else{
+                            System.out.println("没有需要移除的值...");
+                        }
+                    }
+                },2000,10000);*/
+
+        ScheduledExecutorService pool = Executors.newScheduledThreadPool(1);
+        pool.scheduleAtFixedRate(new Runnable() {
+            long startM = System.currentTimeMillis();
+            @Override
+            public void run() {
+                System.out.println("校验时间开始...");
+                //校验时间
+                if(anotationList.size() > 0){
+                    Iterator<MyCacheBean> iterator = anotationList.iterator();
+                    while (iterator.hasNext()){
+                        MyCacheBean myCache = iterator.next();
+                        TimeUnit timeUnit = myCache.getTimeUnit();
+                        if(timeUnit == TimeUnit.SECONDS){
+                            int timeOut = myCache.getTimeOut();
+                            if((System.currentTimeMillis() - startM)/1000 > timeOut){
+                                cache.remove(myCache.getKey());
+                                iterator.remove();
+                                System.out.println("移除key..." + myCache.getKey());
+                            }
+                        }
+                    }
+                }else{
+                    System.out.println("没有需要移除的值...");
+                    }
+             }
+        },1,10,TimeUnit.SECONDS);
+    }
 
     public static Object invokeMethod(Object obj,String methodName,Object... param){
         Object result = null;
@@ -40,6 +99,7 @@ public class CacheUtils {
                     }else{
                         //缓存没有值
                         result = targetMethod.invoke(obj);
+                        anotationList.add(new MyCacheBean(key,myCache.timeOut(),myCache.timeUnit()));
                         cache.put(key,result);
                     }
 
@@ -70,6 +130,7 @@ public class CacheUtils {
                         return value;
                     }else{
                         Object objValue = method.invoke(obj, paramValue);
+                        anotationList.add(new MyCacheBean(key,myCache.timeOut(),myCache.timeUnit()));
                         cache.put(key,objValue);
                     }
                 }
@@ -78,6 +139,7 @@ public class CacheUtils {
             e.printStackTrace();
         }
         return null;
+
     }
 
 

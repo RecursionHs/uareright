@@ -21,9 +21,8 @@ public class UserController {
      * @param userId
      * @return
      */
-    @MyCache(key = "tom")
+    @MyCache(key = "tom",timeOut = 20)
     public User getUser(Integer userId){
-        System.out.println("进入方法...");
         User user = users[userId];
         System.out.println(user);
         return user;
@@ -31,7 +30,6 @@ public class UserController {
 
     @MyCache(key = "tom")
     public User getUser(){
-        System.out.println("进入方法...");
         User user = users[0];
         return user;
     }

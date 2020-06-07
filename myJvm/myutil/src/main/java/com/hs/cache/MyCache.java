@@ -30,5 +30,5 @@ public @interface MyCache {
      * 时间单位
      * @return
      */
-    TimeUnit timeUnit() default TimeUnit.MINUTES;
+    TimeUnit timeUnit() default TimeUnit.SECONDS;
 }
