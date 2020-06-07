@@ -9,6 +9,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 @Repository
 public class IndexDaoImpl implements IndexDao{
 
+    @Override
     public void query(String a) {
         System.out.println("查询数据为...");
         System.out.println(a);
