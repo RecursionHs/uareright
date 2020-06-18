@@ -8,12 +8,10 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.UUID;
 
 /**
  * @author : sk
@@ -30,7 +28,8 @@ public class DynamicProxyUtil {
 
     public static Object newInstance(Object target){
         //随机一个代理类名
-        String proxyName =UUID.randomUUID().toString().substring(0,6);
+        //String proxyName =UUID.randomUUID().toString().substring(0,6);
+        String proxyName = "T";
         StringBuilder contentSb = new StringBuilder();
         Object proxy = null;
         //默认取第一个接口
@@ -139,11 +138,11 @@ public class DynamicProxyUtil {
 
         URLClassLoader loader = new URLClassLoader(urls);
 
-        loader.loadClass(packegeName + "." + className);
+        Class clazz = loader.loadClass(packegeName + "." + className);
 
+        Constructor constructor = clazz.getConstructor(interfaceClass);
 
-        proxy = loader.loadClass(packegeName + "." + className);
-
+        proxy = constructor.newInstance(target);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -151,9 +150,8 @@ public class DynamicProxyUtil {
     }
 
     public static void main(String[] args) {
-        Object ei = newInstance(new EatImpl());
-        //有点问题，后面解决
+        Eat ei = (Eat)newInstance(new EatImpl());
         System.out.println(ei);
-        //ei.eat();
+        ei.eat();
     }
 }
