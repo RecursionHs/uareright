@@ -36,5 +36,27 @@ public class CollectionStream {
                 .map(String::toUpperCase)
                 .sorted((a,b) -> b.compareTo(a))
                 .forEach(System.out::println);
+
+        System.out.println("--------------------");
+
+        //验证 list 中 string 是否有以 b 开头的, 匹配到第一个，即返回 true
+        boolean matchStatus = stringCollection
+                .stream()
+                .anyMatch(s -> s.startsWith("b"));
+
+        System.out.println(matchStatus);
+
+        // 验证 list 中 string 是否都是以 a 开头的
+        boolean allMatch = stringCollection
+                .stream()
+                .allMatch(s -> s.startsWith("a"));
+        System.out.println(allMatch);
+
+        // 验证 list 中 string 是否都不是以 z 开头的
+        boolean noneMatch = stringCollection
+                .stream()
+                .noneMatch(s -> s.startsWith("z"));
+        System.out.println(noneMatch);
+
     }
 }

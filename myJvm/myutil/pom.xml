@@ -10,6 +10,55 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>myutil</artifactId>
+    <properties>
+        <itext.version>7.0.0</itext.version>
+        <itext.licensekey.version>3.0.0</itext.licensekey.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>com.e-iceblue</id>
+            <url>http://repo.e-iceblue.cn/repository/maven-public/</url>
+        </repository>
+        <repository>
+            <id>itext-releases</id>
+            <name>iText Repository - releases</name>
+            <url>https://repo.itextsupport.com/releases</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>io</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>layout</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+        <!-- iText 7 License Key Library -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext-licensekey</artifactId>
+            <version>${itext.licensekey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId> e-iceblue </groupId>
+            <artifactId>spire.pdf</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
 
+    </dependencies>
 
 </project>
