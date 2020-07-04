@@ -1,0 +1,8 @@
+###############
+1. thrift.exe 与 .thrift文件必须在同级目录
+
+2. 在thrift.exe 所在目录执行 thrift -gen java XXX文件.thrift
+
+3. 会在thrift.exe 所在目录 自动覆盖生成 gen-java文件夹
+
+4. 进入 gen-java 文件夹 将新生成代码 替换到项目中即可 

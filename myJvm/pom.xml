@@ -21,6 +21,9 @@
         <module>oop</module>
         <module>rabMq</module>
         <module>TNetty</module>
+        <module>bootMq</module>
+        <module>myutil</module>
+        <module>MyThrift</module>
     </modules>
 
     <build>

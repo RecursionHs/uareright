@@ -1,5 +1,6 @@
-package com.hs.thrift;
+package com.hs.thrift.testDemo;
 
+import com.hs.thrift.HelloWorldService;
 import com.hs.thrift.impl.HelloWorldImpl;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.protocol.TBinaryProtocol;
@@ -8,11 +9,11 @@ import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TTransportException;
 
-public class ToDoSomeThing {
+public class HelloServer {
     public static final int SERVER_PORT = 8090;
 
     public static void main(String[] args) {
-        ToDoSomeThing doSomeThing = new ToDoSomeThing();
+        HelloServer doSomeThing = new HelloServer();
         doSomeThing.startServer();
     }
 
