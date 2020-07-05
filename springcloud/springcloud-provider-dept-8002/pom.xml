@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-provider-dept-8001</artifactId>
+    <artifactId>springcloud-provider-dept-8002</artifactId>
     <dependencies>
         <!--EUREKA-->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka -->

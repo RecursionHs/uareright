@@ -1,0 +1,29 @@
+server:
+  port: 8001
+mybatis:
+  type-aliases-package: com.hs.pojo
+  configLocation:  classpath:mybatis/mybatis-config.xml
+  mapperLocations: classpath:mybatis/mapper/*.xml
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://47.112.197.158:8082/db01?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 1234567
+#Eureka   "http://localhost:8761/eureka/";
+eureka:
+  client:
+    service-url:
+      #单机地址:defaultZone:  http://localhost:7001/eureka/
+      #配置集群地址:http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/，http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-8001 #修改eureka上面的默认描述4
+    hostname: localhost
+#info配置
+info:
+  app.name: hs-springcloud
+  company.name: com.hs
