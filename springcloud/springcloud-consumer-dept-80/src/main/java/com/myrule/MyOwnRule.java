@@ -48,9 +48,7 @@ public class MyOwnRule extends AbstractLoadBalancerRule {
 
             //int index = chooseRandomInt(serverCount);
             currentNum++;
-            if(currentNum > total){
-                currentNum = 0;
-            }
+
             index = chooseNext5Int(currentNum);
             server = upList.get(index);
 
@@ -77,15 +75,18 @@ public class MyOwnRule extends AbstractLoadBalancerRule {
 
     }
 
-    private int chooseNext5Int(int currentNum) {
-        if(currentNum < total ){
-            if((currentNum % 5) != 0){
+    private int chooseNext5Int(int num) {
+        if(num < total ){
+            if((num % 5) != 0){
                 return index;
             }else{
                 return ++index;
             }
+        }else{
+            currentNum = 0;
+            index = 0;
+            return index;
         }
-        return index;
     }
 
     protected int chooseRandomInt(int serverCount) {
