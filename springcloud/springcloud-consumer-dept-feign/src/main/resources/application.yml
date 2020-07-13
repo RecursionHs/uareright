@@ -1,6 +1,12 @@
 server:
   port: 80
 
+#开启feign.hystrix
+feign:
+  hystrix:
+    enabled: true
+
+
 #Eureka
 eureka:
   client:
