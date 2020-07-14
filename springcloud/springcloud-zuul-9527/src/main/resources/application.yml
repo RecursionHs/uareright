@@ -1,0 +1,29 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/,http://localhost:7004/eureka/
+  instance:
+    instance-id: zuul9527.com
+    prefer-ip-address: true
+
+info:
+  app.name: hs-springboot
+  company.name: hs.recursion.com
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept
+    #http://localhost:9527/mydept/dept/get/2
+    mydept.path: /mydept/**
+  #隐藏服务不同再通过http://localhost:9527/springcloud-provider-dept/dept/get/2来访问
+  #ignored-services: springcloud-provider-dept
+  #忽略所有服务
+  ignored-services: "*"
+  #以/hs为前缀访问:http://localhost:9527/hs/mydept/dept/get/4
+  prefix: /hs

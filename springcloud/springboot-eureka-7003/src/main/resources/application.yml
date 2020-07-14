@@ -11,4 +11,4 @@ eureka:
     service-url:
       #单机:defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       #集群:把其它两个地址写上，三者就有关系了
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://localhost:7004/eureka/

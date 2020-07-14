@@ -19,7 +19,7 @@ eureka:
     service-url:
       #单机地址:defaultZone:  http://localhost:7001/eureka/
       #配置集群地址:http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
-      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/，http://eureka7003.com:7003/eureka/
+      defaultZone:  http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/,http://localhost:7004/eureka/
   instance:
     instance-id: springcloud-provider-8003 #修改eureka上面的默认描述4
     hostname: localhost

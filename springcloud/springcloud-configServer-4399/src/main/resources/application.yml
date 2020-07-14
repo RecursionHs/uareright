@@ -1,0 +1,14 @@
+server:
+  port: 4399
+spring:
+  application:
+    name: springcloud-config-server
+  #远程仓库信息
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/sknoend/springcloud-config.git
+#页面访问地址例如：http://localhost:4399/application-dev.yml
+#http://localhost:4399/application/dev
+#http://localhost:4399/application/dev/master
