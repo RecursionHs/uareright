@@ -21,7 +21,9 @@
         <module>springboot-eureka-7004</module>
         <module>springcloud-consumer-hystrix-dashboard</module>
         <module>springcloud-zuul-9527</module>
-        <module>springcloud-config-4399</module>
+        <module>springcloud-configServer-4399</module>
+        <module>springcloud-configClient-4340</module>
+        <module>springboot-config-eureka-7001</module>
     </modules>
     <!--打包方式  pom-->
     <packaging>pom</packaging>
