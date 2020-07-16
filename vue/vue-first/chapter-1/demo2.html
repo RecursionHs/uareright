@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1 v-if="show">true</h1>
+    <h1 v-else="show">false</h1>
+</div>
+<div id="app2">
+    <h1 v-if="language==='en'">英文</h1>
+    <h1 v-else-if="language==='cn'">中文</h1>
+    <h1 v-else>默认简体</h1>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            show: true
+        }
+    });
+
+    var vm2 = new Vue({
+        el: "#app2",
+        data:{
+            language: 'en'
+        }
+    });
+
+</script>
+
+</html>

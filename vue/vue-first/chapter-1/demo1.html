@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span v-bind:title="message">
+    what f</span>
+</div>
+<div id="app2">
+{{message}}
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data:{
+            message:"hello,vue"
+        }
+    });
+
+    var vm2 = new Vue({
+        el: "#app2",
+        data:{
+            message:"hello,vue"
+        }
+    });
+</script>
+
+</html>
