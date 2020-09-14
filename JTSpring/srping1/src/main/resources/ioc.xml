@@ -1,0 +1,11 @@
+<beans>
+    <bean id="stu" class="com.hs.ioc.Student">
+        <property name="name" value="tom"/>
+        <property name="age" value="23"/>
+    </bean>
+    <bean id="teacher" class="com.hs.ioc.Teacher">
+        <property name="name" value="jerry" />
+        <property name="classStu" value="1班" />
+        <property name="stu" ref="stu" />
+    </bean>
+</beans>
