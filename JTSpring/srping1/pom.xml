@@ -11,7 +11,14 @@
 
     <groupId>com.hs.srping1</groupId>
     <artifactId>srping1</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
