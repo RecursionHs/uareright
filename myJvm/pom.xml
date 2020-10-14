@@ -24,6 +24,8 @@
         <module>bootMq</module>
         <module>myutil</module>
         <module>MyThrift</module>
+        <module>junpHeap</module>
+        <module>excle</module>
     </modules>
 
     <build>

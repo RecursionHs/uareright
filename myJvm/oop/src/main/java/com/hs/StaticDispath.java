@@ -8,11 +8,13 @@ import org.junit.Test;
  * @Version 1.0
  **/
 public class StaticDispath {
-     static abstract class Human{}
 
-     static class Man extends Human{}
+    static abstract class Human{}
 
-     static class Woman extends Human{}
+    static class Man extends Human {}
+
+    static class Woman extends Human {}
+
 
     public void sayHello(Human human){
         System.out.println("hello humen");

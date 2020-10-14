@@ -7,7 +7,9 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -37,15 +39,21 @@ public class JDBCWrite {
             workbook = new SXSSFWorkbook();
             //sheet页
             Sheet sheet = workbook.createSheet("oracleDateOutput");
+            Row row = sheet.createRow(0);
+            //写入标题
+            for(int i = 0;i < fieldNames.size() - 1;i++){
+                Cell cell = row.createCell(i);
+                cell.setCellValue(fieldNames.toArray()[i].toString());
+            }
+            workbook.write(os);
 
-
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 List<Entity> result = Db.use().query("select * from (" +
                         "select t.*,rownum as row_number_ from P_RT_MEANS_CNT t)" +
                         "where row_number_ > ? and row_number_ <= ?", i*1000,(i + 1)*1000);
                 //forToWriteData(result,1000 * i,fieldNames,os,sheet,workbook);
                 //forToWriteData(result,1000 * i ,fieldNames,"oracleData.xlsx");
-                forToWriteData(result,1000 * i ,fieldNames,"oracleData.xlsx");
+                forToWriteData(result,1000 * i + 1,fieldNames,"oracleData.xlsx");
                 result.clear();
             }
             System.out.println("over!!!");
@@ -114,15 +122,22 @@ public class JDBCWrite {
         long startTime = System.currentTimeMillis();
 
         //工作簿
-        Workbook workbook = new SXSSFWorkbook();
+        //Workbook workbook = new SXSSFWorkbook();
         //sheet页
-        Sheet sheet = workbook.createSheet("oracleDateOutput");
+        //Sheet sheet = workbook.createSheet("oracleDateOutput");
+        //FileOutputStream os = new FileOutputStream(PATH + FileName);
+
+        FileInputStream in = new FileInputStream(PATH + FileName);
+        XSSFWorkbook workbook1= new XSSFWorkbook(in);
+        Workbook workbook = new SXSSFWorkbook(workbook1);
+        Sheet sheet0 = workbook.getSheetAt(0);
+
         FileOutputStream os = new FileOutputStream(PATH + FileName);
 
 
         int maxRowNum = startRow + result.size();
         for(int j = startRow;j < maxRowNum ;j++){
-            Row row = sheet.createRow(j);
+            Row row = sheet0.createRow(j);
             for(int i = 0;i < fieldNames.size() - 1;i++){
                 Cell cell = row.createCell(i);
                 cell.setCellValue(result.get(j - startRow).get(fieldNames.toArray()[i]).toString());
@@ -134,8 +149,9 @@ public class JDBCWrite {
         //FileOutputStream os = new FileOutputStream(PATH + "oracleData.xlsx");
         workbook.write(os);
         os.close();
+        workbook.close();
         //临时文件清理
-        ((SXSSFWorkbook)workbook).dispose();
+        //((SXSSFWorkbook)workbook).dispose();
         System.out.println("over." + ((double)(endTime - startTime))/1000);
     }
 }

@@ -12,7 +12,16 @@
         <module>user-service-provider</module>
         <module>order-service-consumer</module>
         <module>gmall-interface</module>
+
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.hs</groupId>
+            <artifactId>gmall-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>

@@ -16,5 +16,8 @@
     <!--声明要调用的远程服务的接口-->
     <dubbo:reference interface="com.hs.gmall.service.UserService" id="userService"></dubbo:reference>
 
-
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
+<!--
+    <dubbo:monitor address="127.0.0.1:7070"></dubbo:monitor>
+-->
 </beans>

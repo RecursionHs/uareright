@@ -9,7 +9,7 @@ public class StartGame {
 
     public static void main(String[] args) {
 
-        Mechanician mechanician = new Mechanician();
+        Role mechanician = new Mechanician();
         mechanician.appearance();
         mechanician.setWeapon(new AK47());
         mechanician.useWeapon();

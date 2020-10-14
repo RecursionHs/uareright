@@ -20,12 +20,10 @@ public class MultiThread {
         final MultiThread multiThread2 = new MultiThread();
 
         new Thread(new Runnable() {
-            @Override
             public void run() {
                 multiThread1.printNum("thread1","a");
             }
         }).start();new Thread(new Runnable() {
-            @Override
             public void run() {
                 multiThread2.printNum("thread2","b");
             }
